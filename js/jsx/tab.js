@@ -1,7 +1,7 @@
 var Tab = React.createClass({
 	shortenString: function(str) {
 		// modify threshold here
-		var threshold = 60
+		var threshold = 55;
 
 		if(str.length > threshold)
 			return str.substring(0, threshold) + '...';
@@ -20,8 +20,8 @@ var Tab = React.createClass({
 		var favicon = 'chrome://favicon/' + this.props.url;
 		return (
 			<li onClick={this.handleTabClick}>
-				<img src={favicon} />
-				{title}
+				<img src={favicon} className="left" />
+				<span>{title}</span>
 				<img src="/images/remove.png" className="right" onClick={this.handleRemoveClick} />
 			</li>	
 		)
