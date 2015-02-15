@@ -1,0 +1,36 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+}
+
+input {
+	width: 95%;
+	display: block;
+	margin: 0 auto;
+	padding: 2px;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+ul.tabList {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.tabList li {
+	height: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	cursor: pointer;
+	background-color: #EFEFEF;
+}
+
+ul.tabList li:hover {
+	background-color: #EBEBEB;
+}
+
+.right {
+	float: right;
+}
