@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "Fuzzy finder for chrome tabs.",
-  "homepage_url": "https://localhost:8080",
+  "homepage_url": "https://github.com/LordZamy/BurstTab",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
