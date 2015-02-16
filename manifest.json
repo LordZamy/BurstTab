@@ -23,7 +23,6 @@
   },
   "permissions": [
     "chrome://favicon/",
-    "history",
     "tabs"
   ],
   "commands": {
