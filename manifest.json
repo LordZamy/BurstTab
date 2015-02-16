@@ -29,8 +29,11 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+K",
-        "windows": "Ctrl+Shift+K"
+        "default": "Ctrl+Shift+L",
+        "windows": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L",
+        "chromeos": "Ctrl+Shift+L",
+        "linux": "Ctrl+Shift+L"
       }
     }
   }
