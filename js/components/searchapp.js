@@ -29,12 +29,12 @@ var SearchApp = React.createClass({displayName: "SearchApp",
 		else
 			this.setState({tabs: result});
 	},
-	handleRemoveClick: function(tabComponent) {
+	handleRemoveClick: function(tabId) {
 		// close chosen tab first
-		closeTab(tabComponent.props.id);
+		closeTab(tabId);
 
 		// get index of tab in allTabs array and remove it
-		var index = findInTabArray(tabComponent.props.id);
+		var index = findInTabArray(tabId);
 		allTabs.splice(index, 1);
 
 		// update state
@@ -49,7 +49,12 @@ var SearchApp = React.createClass({displayName: "SearchApp",
 			if(index < this.state.tabs.length - 1) this.setState({index: index + 1});
 			e.preventDefault();
 		} else if(e.type === 13 || e.which === 13) {	// Enter
-			switchToTab(this.state.tabs[index].id);
+			if(index >= 0 && index < this.state.tabs.length)
+				switchToTab(this.state.tabs[index].id);
+			e.preventDefault();
+		} else if(e.ctrlKey && e.shiftKey && (e.type === 186 || e.which === 186)) {
+			if(index >= 0 && index < this.state.tabs.length)
+				this.handleRemoveClick(this.state.tabs[index].id);
 			e.preventDefault();
 		}
 	},

@@ -1,6 +1,6 @@
 var TabList = React.createClass({
 	handleRemoveClick: function(tabComponent) {
-		this.props.removeClick(tabComponent);
+		this.props.removeClick(tabComponent.props.id);
 	},
 	render: function() {
 		var createItem = function(tab, index) {
