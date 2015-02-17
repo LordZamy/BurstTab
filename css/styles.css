@@ -32,8 +32,13 @@ ul.tabList li:hover {
 }
 
 ul.tabList li span {
+	display: inline-block;
+	max-width: 30em;
 	font-size: 1.1em;
 	margin-left: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 .left {
