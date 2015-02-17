@@ -1,7 +1,7 @@
 var Tab = React.createClass({
 	shortenString: function(str) {
 		// modify threshold here
-		var threshold = 55;
+		var threshold = 50;
 
 		if(str.length > threshold)
 			return str.substring(0, threshold) + '...';
