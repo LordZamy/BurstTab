@@ -4,7 +4,9 @@ var TabList = React.createClass({displayName: "TabList",
 	},
 	render: function() {
 		var createItem = function(tab, index) {
-			return React.createElement(Tab, {title: tab.title, key: tab.id, id: tab.id, url: tab.url, removeClick: this.handleRemoveClick, index: index})
+			var selected = false;
+			if(index === this.props.index) selected = true;
+			return React.createElement(Tab, {title: tab.title, key: tab.id, id: tab.id, url: tab.url, removeClick: this.handleRemoveClick, isSelected: selected})
 		}.bind(this);
 		return (
 			React.createElement("ul", {className: "tabList"}, 

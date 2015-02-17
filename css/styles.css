@@ -28,7 +28,11 @@ ul.tabList li {
 }
 
 ul.tabList li:hover {
-	background-color: #EBEBEB;
+	background-color: #DFDFDF;
+}
+
+ul.tabList li.selected {
+	background-color: #DADADA;
 }
 
 ul.tabList li span {

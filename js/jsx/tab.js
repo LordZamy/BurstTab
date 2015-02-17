@@ -8,8 +8,12 @@ var Tab = React.createClass({
 	},
 	render: function() {
 		var favicon = 'chrome://favicon/' + this.props.url;
+
+		var classString = '';
+		if(this.props.isSelected) classString += 'selected';
+		
 		return (
-			<li onClick={this.handleTabClick}>
+			<li onClick={this.handleTabClick} className={classString}>
 				<img src={favicon} className="left" />
 				<span>{this.props.title}</span>
 				<img src="/images/remove.png" className="right" onClick={this.handleRemoveClick} />
