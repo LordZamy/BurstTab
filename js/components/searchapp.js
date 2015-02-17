@@ -16,7 +16,10 @@ var SearchApp = React.createClass({displayName: "SearchApp",
 		var searchValue = searchComponent.getDOMNode().value;
 		var f = new Fuse(allTabs, fuseOptions);
 		if(searchValue === '' || searchValue === null) {
-			this.setState({tabs: allTabs});
+			if(this.state.index >= allTabs.length)
+				this.setState({tabs: allTabs, index: allTabs.length - 1});
+			else
+				this.setState({tabs: allTabs});
 			return;
 		}
 		var result = f.search(searchValue);
