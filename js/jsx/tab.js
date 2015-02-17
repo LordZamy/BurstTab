@@ -2,9 +2,9 @@ var Tab = React.createClass({
 	handleTabClick: function() {
 		switchToTab(this.props.id);
 	},
-	handleRemoveClick: function() {
-		this.props.removeClick(this);	
-		return false; 	// to prevent handleTabClick from firing
+	handleRemoveClick: function(e) {
+		this.props.removeClick(this);
+		e.preventDefault();
 	},
 	render: function() {
 		var favicon = 'chrome://favicon/' + this.props.url;
