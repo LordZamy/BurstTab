@@ -5,12 +5,12 @@ html, body {
 }
 
 input {
-	width: 95%;
+	width: 100%;
 	display: block;
-	margin: 0 auto;
-	padding: 2px;
-	margin-top: .5em;
-	margin-bottom: .5em;
+	border: 0;
+	outline: 0;
+	margin: 1em;
+	font-size: 1.1em;
 }
 
 ul.tabList {
@@ -20,9 +20,7 @@ ul.tabList {
 }
 
 ul.tabList li {
-	height: 2em;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding: 1em;
 	cursor: pointer;
 	background-color: #EFEFEF;
 }
