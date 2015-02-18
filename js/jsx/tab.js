@@ -8,12 +8,17 @@ var Tab = React.createClass({
 	},
 	componentDidUpdate: function() {
 		// scroll to selected li after updating state
-		// TODO: fix bad code
 		if(this.props.isSelected) {
-			if(this.getDOMNode().getBoundingClientRect().top + this.getDOMNode().offsetHeight - document.body.getBoundingClientRect().top > document.body.scrollTop + window.innerHeight)
-				document.body.scrollTop = this.getDOMNode().getBoundingClientRect().top + this.getDOMNode().offsetHeight - document.body.getBoundingClientRect().top - window.innerHeight;
-			else if(this.getDOMNode().getBoundingClientRect().top - document.body.getBoundingClientRect().top < document.body.scrollTop)
-				document.body.scrollTop = this.getDOMNode().getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+			var thisBoundingRectTop = this.getDOMNode().getBoundingClientRect().top;
+			var thisOffsetHeight = this.getDOMNode().offsetHeight;
+			var documentBoundingRectTop = document.body.getBoundingClientRect().top;
+			console.log(thisBoundingRectTop - documentBoundingRectTop, document.body.scrollTop);
+			if(thisBoundingRectTop + thisOffsetHeight - documentBoundingRectTop > document.body.scrollTop + window.innerHeight)
+				document.body.scrollTop = thisBoundingRectTop + thisOffsetHeight - documentBoundingRectTop - window.innerHeight;
+			else if(this.props.index === 0)
+				document.body.scrollTop = 0;
+			else if(thisBoundingRectTop - documentBoundingRectTop < document.body.scrollTop)
+				document.body.scrollTop = thisBoundingRectTop - documentBoundingRectTop;
 		}
 	},
 	render: function() {
