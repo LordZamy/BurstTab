@@ -15,6 +15,6 @@
 |Up| Select the tab above
 |Down| Select the tab below
 |Enter| Switch to the selected tab
-|Ctrl+Shift+L| Invoke the extension
+|Ctrl+Shift+L| Activate the extension
 |Ctrl+Shift+;| Close the selected tab
 
