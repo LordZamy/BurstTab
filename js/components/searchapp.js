@@ -42,6 +42,9 @@ var SearchApp = React.createClass({displayName: "SearchApp",
 
 		// update state
 		this.handleSearchChange(this.refs.searchBox);
+
+		// give focus to search in case of click event
+		this.refs.searchBox.getDOMNode().focus();
 	},
 	handleKeyDown: function(e) {
 		var index = this.state.index;
