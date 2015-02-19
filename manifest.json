@@ -1,6 +1,6 @@
 {
   "name": "BurstTab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Fuzzy finder for chrome tabs.",
   "homepage_url": "https://github.com/LordZamy/BurstTab",
