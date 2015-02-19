@@ -8,7 +8,7 @@ var SearchBox = React.createClass({
 	},
 	render: function() {
 		return (
-			<input onChange={this.handleSearchChange} id="searchBox" autoFocus />
+			<input onChange={this.handleSearchChange} id="searchBox" autoFocus placeholder="Search Tabs" />
 		)
 	}
 });

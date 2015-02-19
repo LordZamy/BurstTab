@@ -8,11 +8,12 @@ var Tab = React.createClass({
 	},
 	componentDidUpdate: function() {
 		// scroll to selected li after updating state
+		// this code works but don't know why
 		if(this.props.isSelected) {
 			var thisBoundingRectTop = this.getDOMNode().getBoundingClientRect().top;
-			var thisOffsetHeight = this.getDOMNode().offsetHeight;
+			var thisOffsetHeight = this.getDOMNode().offsetHeight + parseFloat(window.getComputedStyle(this.getDOMNode(), null).getPropertyValue('padding'));
 			var documentBoundingRectTop = document.body.getBoundingClientRect().top;
-			console.log(thisBoundingRectTop - documentBoundingRectTop, document.body.scrollTop);
+
 			if(thisBoundingRectTop + thisOffsetHeight - documentBoundingRectTop > document.body.scrollTop + window.innerHeight)
 				document.body.scrollTop = thisBoundingRectTop + thisOffsetHeight - documentBoundingRectTop - window.innerHeight;
 			else if(this.props.index === 0)
