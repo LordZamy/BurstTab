@@ -56,7 +56,7 @@ var SearchApp = React.createClass({displayName: "SearchApp",
 			e.preventDefault();
 		} else if(e.type === 13 || e.which === 13) {	// Enter
 			if(index >= 0 && index < this.state.tabs.length)
-				switchToTab(this.state.tabs[index].id);
+				switchToTab(this.state.tabs[index].id, this.state.tabs[index].windowId);
 			e.preventDefault();
 		} else if(e.ctrlKey && e.shiftKey && (e.type === 186 || e.which === 186)) {
 			if(index >= 0 && index < this.state.tabs.length)

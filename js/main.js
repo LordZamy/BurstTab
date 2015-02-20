@@ -7,8 +7,10 @@ function getAllTabs(callback) {
 	});
 }
 
-function switchToTab(tabId) {
-	chrome.tabs.update(tabId, {active: true});
+function switchToTab(tabId, windowId) {
+	chrome.tabs.update(tabId, {active: true}, function() {
+		chrome.windows.update(windowId, {focused: true});
+	});
 }
 
 function closeTab(tabId) {

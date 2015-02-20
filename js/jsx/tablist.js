@@ -6,7 +6,7 @@ var TabList = React.createClass({
 		var createItem = function(tab, index) {
 			var selected = false;
 			if(index === this.props.index) selected = true;
-			return <Tab title={tab.title} key={tab.id} id={tab.id} url={tab.url} removeClick={this.handleRemoveClick} isSelected={selected} index={index} />
+			return <Tab title={tab.title} key={tab.id} id={tab.id} url={tab.url} windowId={tab.windowId} removeClick={this.handleRemoveClick} isSelected={selected} index={index} />
 		}.bind(this);
 		return (
 			<ul className="tabList">

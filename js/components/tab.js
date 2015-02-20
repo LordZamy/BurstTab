@@ -1,6 +1,6 @@
 var Tab = React.createClass({displayName: "Tab",
 	handleTabClick: function() {
-		switchToTab(this.props.id);
+		switchToTab(this.props.id, this.props.windowId);
 	},
 	handleRemoveClick: function(e) {
 		this.props.removeClick(this);
@@ -27,7 +27,6 @@ var Tab = React.createClass({displayName: "Tab",
 
 		var classString = '';
 		if(this.props.isSelected) classString += 'selected';
-		
 		return (
 			React.createElement("li", {onClick: this.handleTabClick, className: classString}, 
 				React.createElement("img", {src: favicon, className: "left"}), 
